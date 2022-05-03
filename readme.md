@@ -12,7 +12,7 @@ A simple blogging webapp built using NodeJS, ExpressJS and MongoDb. Authenticate
 
 ## Checkout Hosted WebApp here
 
-[Click here ✌](https://blog-app-jatin.herokuapp.com/)
+[Click here ✌](https://fathomless-earth-17041.herokuapp.com/)
 
 ## Routes
 
