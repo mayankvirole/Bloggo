@@ -12,6 +12,7 @@ const User = require("./models/user");
 const connect = mongoose.connect("mongodb+srv://mankavilla:password1221@cluster0.ekon0.mongodb.net/blogDB", {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
+	useFindAndModify: false,
 });
 connect.then(
 	(db) => {
@@ -39,11 +40,11 @@ const userRoutes = require("./routes/user");
 
 //------------PASSPORT CONFIGURATION-----------
 app.use(
-  require("express-session")({
-    secret: "I am the best",
-    resave: false,
-    saveUninitialized: false,
-  })
+	require("express-session")({
+		secret: "I am the best",
+		resave: false,
+		saveUninitialized: false,
+	})
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -53,8 +54,8 @@ passport.deserializeUser(User.deserializeUser());
 
 //to get current logged in user
 app.use((req, res, next) => {
-  res.locals.currentUser = req.user;
-  next();
+	res.locals.currentUser = req.user;
+	next();
 });
 //------------------------------------------------
 
@@ -66,5 +67,5 @@ app.use("/user", userRoutes);
 let port = process.env.PORT || 3030;
 
 app.listen(port, () => {
-  console.log(`Server Listening at http://localhost:${port}`);
+	console.log(`Server Listening at http://localhost:${port}`);
 });
