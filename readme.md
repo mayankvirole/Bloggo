@@ -12,7 +12,7 @@ A simple blogging webapp built using NodeJS, ExpressJS and MongoDb. Authenticate
 
 ## Checkout Hosted WebApp here
 
-[Click here ✌](https://fathomless-earth-17041.herokuapp.com/)
+[Click here ✌](https://tranquil-brook-25525.herokuapp.com)
 
 ## Routes
 
@@ -52,12 +52,4 @@ A simple blogging webapp built using NodeJS, ExpressJS and MongoDb. Authenticate
     └── register.hbs
 ```
 
-# How to run
 
-- Git clone repository
-- Then run these commands in terminal/shell
-
-```npm
-    npm install
-    npm start
-```
